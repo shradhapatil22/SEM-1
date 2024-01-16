@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+main()
+{
+    FILE *file1, *file2;
+    char str[99]={},ch;
+    int i=0,len=0;
+    file1=fopen("input.txt","w");
+    printf("Enter the string Below:\n");
+    do{
+        ch=getchar();
+        fputc(ch,file1);
+        len++;
+    }while(ch!='\n');
+    fclose(file1);
+    file1=fopen("input.txt","r");
+    file2=fopen("output.txt","w");
+    while((ch=getc(file1))!=EOF)
+    {
+        if(isupper(ch))
+        {
+            fputc(tolower(ch),file2);
+        }
+        else{
+            fputc(toupper(ch),file2);
+        }
+    }
+    fclose(file1);
+    fclose(file2);
+    file2=fopen("output.txt","r");
+    while((ch=getc(file2))!=EOF)
+    {
+        str[i]=ch;
+        i++;
+    }
+    printf("The Output String copied in file 'output.txt' is shown below:\n");
+    puts(str);
+}

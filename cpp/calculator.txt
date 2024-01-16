@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int p = 0;
+    while(p==0)
+        {
+            int x,y,sum;
+            int value;
+            printf("WELCOME TO C LANGUAGE CALCULATOR.\nPlease select the type of calculations you would like to do below:\n");
+            printf("For Addition Select: 1\n");
+            printf("For Subtraction Select: 2\n");
+            printf("For Multiplication Select: 3\n");
+            printf("For Division Select: 4\n");
+            printf("Please Enter one option: \t");
+            scanf("%d",&value);
+            printf("Entered value=%d",value);
+            if (value==1)
+            {
+                printf("\nYou Have selected Addition:\n");
+                printf("Please enter the values below:\n");
+                printf("Value X:\t");
+                scanf("%d",&x);
+                printf("Value Y:\t");
+                scanf("%d",&y);
+                sum=x+y;
+                printf("\nThe Result of %d + %d is %d.",x,y,sum);
+                printf("\nThank for using C LANGUAGE CALCULATOR.");
+                
+            }
+            else if (value==2)
+            {
+                printf("\nYou Have selected Subtraction:\n");
+                printf("Please enter the values below:\n");
+                printf("Value X:\t");
+                scanf("%d",&x);
+                printf("Value Y:\t");
+                scanf("%d",&y);
+                sum=x-y;
+                printf("\nThe Result of %d - %d is %d.",x,y,sum);
+                printf("\nThank for using C LANGUAGE CALCULATOR.");
+                
+            }
+            else if (value==3)
+            {
+                printf("\nYou have selected Multiplication:\n");
+                printf("Please enter the values below:\n");
+                printf("Value X:\t");
+                scanf("%d",&x);
+                printf("Value Y:\t");
+                scanf("%d",&y);
+                sum=x*y;
+                printf("\nThe Result of %d x %d is %d.",x,y,sum);
+                printf("\nThank for using C LANGUAGE CALCULATOR.");
+               
+            }
+            else if (value==4)
+            {
+                printf("\nYou have selected Division:\n");
+                printf("Please enter the values below:\n");
+                printf("Value X:\t");
+                scanf("%d",&x);
+                printf("Value Y:\t");
+                scanf("%d",&y);
+                sum=x/y;
+                printf("\nThe Result of %d / %d is %d.",x,y,sum);
+                printf("\nThank for using C LANGUAGE CALCULATOR.");
+                
+             }
+            else
+            if(value!=1|| value!=2 || value!=3|| value!=4)
+            {
+                printf("Invalid Input!!");
+               
+            }
+           printf(" Would You like to calculate again? [0 or 1]: \t");
+            scanf("%d",&p);
+           
+        }
+}
